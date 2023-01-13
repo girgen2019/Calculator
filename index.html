@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link type="image/x-icon" href="./assets/calculator.png" rel="shortcut icon">
+    <title>Calculator</title>
+</head>
+<body>
+    <section>
+        <div class="calculator-body">
+            <div class="calculator-screen">
+                <span class="screen1">0</span>
+                <span class="screen2">0</span>
+                <span class="temp-result">0</span>
+            </div>
+            <div class="buttons">
+            <div class="button item_ac bg-green">AC</div> 
+            <div class="button item_c bg-green" data-delete="data-delete">C</div>
+            <div class="button item_present bg-green" data-operation="data-operation">%</div>
+            <div class="button item_degree bg-green" data-operation="data-operation">/</div>
+            <div class="button item_seven" data-number="data-number">7</div>
+            <div class="button item_eight" data-number="data-number">8</div>
+            <div class="button item_nine" data-number="data-number">9</div>
+            <div class="button item_multyply bg-green" data-operation="data-operation">x</div>
+            <div class="button item_four" data-number="data-number">4</div>
+            <div class="button item_five" data-number="data-number">5</div>
+            <div class="button item_six" data-number="data-number">6</div>
+            <div class="button item_minus bg-green" data-operation="data-operation">-</div>
+            <div class="button item_one" data-number="data-number">1</div>
+            <div class="button item_two" data-number="data-number">2</div>
+            <div class="button item_tree" data-number="data-number">3</div>
+            <div class="button item_plus bg-green" data-operation="data-operation">+</div>
+            <div class="button item_zero" data-number="data-number">0</div>
+            <div class="button item_dot bg-green" data-number="data-number">.</div>
+            <div class="button item_equal bg-green_green" data-equals="data-equals">=</div>
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>

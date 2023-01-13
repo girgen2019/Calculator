@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    z-index: -2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+
+    background: linear-gradient(218deg, #13e3ad, #4084e3, #8440e3);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+
+@font-face {
+    font-family: myMontserrat;
+    src: url(./assets/Montserrat/Montserrat-VariableFont_wght.ttf);
+  } 
+
+
+
+html {
+    font-family: myMontserrat;
+}
+
+.calculator-body{
+    margin: 50px auto;
+    width: 300px;
+    height: 520px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: #000;
+    color:#fff;
+    padding: 20px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+
+}
+
+.calculator-screen{
+    position: relative;
+    height: 125px; 
+    padding: 10px;
+    display: grid; 
+    justify-items: end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calculator-screen .screen1 {
+    opacity: 0.4;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+.calculator-screen .screen2{
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.temp-result{
+    width: 100%;
+    position: absolute;
+    left: 5%;
+    text-align: left;
+    bottom: 0;
+    font-size: 20px;
+    color:#fff;
+    opacity: 0.3;
+}
+
+.edit{
+    display: grid;
+    justify-items: end;
+    grid-gap:10px;
+    margin-bottom: 10px;
+}
+
+.item_ac{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background: #333;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item_ac:hover{
+    filter: brightness(120%);
+}
+
+.item_ac:active{
+    filter: brightness(90%);
+}
+
+.buttons{
+    display: grid;
+    grid-template-areas: 
+    /* "item_ac item_ac item_ac item_ac" */
+    "item_ac item_c item_present item_degree"
+    "item_seven item_eight item_nine item_multyply"
+    "item_four item_five item_six item_minus"
+    "item_one item_two item_tree plus"
+    "item_zero item_zero dot equal";
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.button{
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item_zero{
+grid-area: item_zero;
+width: 100%;
+border-radius: 34px;
+}
+
+.button:hover{
+    filter: brightness(120%);
+}
+
+.button:active{
+    filter: brightness(90%);
+}
+
+.bg-green_green{
+    background: rgba(48, 248, 3, 0.701);
+}
+
+.bg-green{
+    color: rgba(48, 248, 3, 0.701);
+}
