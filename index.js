@@ -12,7 +12,7 @@ let result = null;
 let lastOperation = "";
 let haveDot = false;
 
-for(let number of numbersOnly){
+for (let number of numbersOnly) {
   number.addEventListener("click", (e) => {
     if (e.target.innerText === "." && !haveDot) {
       haveDot = true;
@@ -24,13 +24,13 @@ for(let number of numbersOnly){
   });
 }
 
-for(let operators of operatorsOnly){
+for (let operators of operatorsOnly) {
   operators.addEventListener("click", (e) => {
     if (!dis2Num) return;
     haveDot = false;
     const operationName = e.target.innerText;
-    console.log("operationName",e.target.textContent)
-    console.log("operationName",e.target.innerText)
+    console.log("operationName", e.target.textContent);
+    console.log("operationName", e.target.innerText);
     if (dis1Num && dis2Num && lastOperation) {
       mathOperation();
     } else {
@@ -43,6 +43,7 @@ for(let operators of operatorsOnly){
 
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
+  displayOne.innerText = dis1Num;
   displayTwo.innerText = "";
   dis2Num = "";
   tempResult.innerText = result;
@@ -58,7 +59,8 @@ function mathOperation() {
   } else if (lastOperation === "/") {
     result = parseFloat(result) / parseFloat(dis2Num);
   } else if (lastOperation === "%") {
-    result = (parseFloat(result) * (parseFloat(dis2Num)/100))
+    result = parseFloat(result) * (parseFloat(dis2Num) / 100);
+    console.log("%", result);
   }
 }
 // operation();
@@ -108,21 +110,21 @@ window.addEventListener("keydown", (e) => {
   } else if (e.key === "*") {
     clickOperation("x");
   } else if (e.key == "Enter" || e.key === "=") {
-    console.log("enter")
+    console.log("enter");
     clickEqual();
   }
 });
- 
+
 function clickButtonEl(key) {
-for(let button of numbersOnly){
-  if (button.innerText === key) button.click();
-}
+  for (let button of numbersOnly) {
+    if (button.innerText === key) button.click();
+  }
 }
 
 function clickOperation(key) {
-for(let operation of operatorsOnly){
-  if (operation.innerText === key) operation.click();
-}
+  for (let operation of operatorsOnly) {
+    if (operation.innerText === key) operation.click();
+  }
 }
 
 function clickEqual() {
